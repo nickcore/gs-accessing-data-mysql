@@ -1,13 +1,20 @@
-mysql:
-  image: mysql
-  ports:
-    - "3306:3306"
-  expose:
-    - "3306"
-  environment:
-    - MYSQL_USER=springuser
-    - MYSQL_PASSWORD=ThePassword
-    - MYSQL_DATABASE=db_example
-    - MYSQL_ROOT_PASSWORD=root
-  volumes:
-    - "./conf.d:/etc/mysql/conf.d:ro"
+version: "3.7"
+
+services:
+  app:
+    image: nickcore/gs-accessing-data-mysql
+    ports:
+      - 8080:8080
+
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - gs-accessing-data-db:/var/lib/mysql
+    environment:
+      MYSQL_USER: springuser
+      MYSQL_PASSWORD: ThePassword
+      MYSQL_DATABASE: db_example
+      MYSQL_ROOT_PASSWORD: root
+
+volumes:
+  gs-accessing-data-db:
