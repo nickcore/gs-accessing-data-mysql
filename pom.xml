@@ -52,13 +52,13 @@
 					<to>
                          			<image>nickcore/gs-accessing-data-mysql</image>
 					</to>
+					<container>
+						<mainClass>com.example.accessingdatamysql.AccessingDataMysqlApplication</mainClass>
+						<ports>
+							<port>8080</port>
+						</ports>
+					</container>
 				</configuration>
-				<container>
-					<mainClass>com.example.accessingdatamysql.AccessingDataMysqlApplication</mainClass>
-					<ports>
-						<port>8080</port>
-					</ports>
-				</container>
 			</plugin>
 		</plugins>
 	</build>
