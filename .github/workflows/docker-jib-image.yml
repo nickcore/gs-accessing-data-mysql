@@ -19,8 +19,8 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
-      - name: Publish to the Maven Central Repository
+      - name: Publish to the Docker Hub
         run: |
-          ./mvnw compile jib:build\
+          ./mvnw compile jib:build \
           -Djib.to.auth.username=${{ secrets.DOCKER_USERNAME }} \
           -Djib.to.auth.password=${{ secrets.DOCKER_USERNAME }}
