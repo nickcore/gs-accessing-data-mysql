@@ -1,9 +1,6 @@
 # Compiled class file
 *.class
 
-# Log file
-*.log
-
 # BlueJ files
 *.ctxt
 
@@ -21,3 +18,19 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Build & runtime files
+target/
+*.log
+.flattened-pom.xml
+
+# Eclipse project files
+.settings/
+.project
+.classpath
+
+# IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws

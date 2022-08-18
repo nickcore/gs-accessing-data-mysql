@@ -50,9 +50,14 @@
 				<version>3.2.1</version>
 				<configuration>
 					<to>
-                         			<image>nickcore/gs-accessing-data-mysql</image>
+						<image>nickcore/gs-accessing-data-mysql</image>
 					</to>
 					<container>
+						<!--
+						<jvmFlags>
+							<jvmFlag>-Djavax.net.debug=all</jvmFlag>
+						</jvmFlags>
+						-->
 						<mainClass>com.example.accessingdatamysql.AccessingDataMysqlApplication</mainClass>
 						<ports>
 							<port>8080</port>
