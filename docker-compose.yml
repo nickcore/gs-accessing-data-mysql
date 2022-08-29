@@ -3,9 +3,10 @@ version: "3.7"
 services:
   app:
     image: nickcore/gs-accessing-data-mysql
-    command: [ "--MYSQL_HOST=mysql"]
     depends_on:
       - mysql
+    environment:
+      MYSQL_HOST: mysql2
     ports:
       - 8080:8080
 
